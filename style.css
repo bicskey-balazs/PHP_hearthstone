@@ -1,0 +1,116 @@
+#cardsDisplay{
+    font-family: 'HSfont', sans-serif;
+    color: peru;
+    height: 200px;
+}
+
+#cardsDisplayMain{
+    height: 1000px;
+    background-image: url(hatter1.png);
+    font-family: 'HSfont', sans-serif;
+}
+
+.seged{
+    text-align: center;
+}
+
+.seged2{
+    border-bottom: rgb(165, 75, 42) 8px solid;
+}
+
+.hatter2{
+    background-image: url(hatter2.webp);
+    height: 200px;
+    z-index: -1;
+}
+
+.formHR{
+    margin-bottom: 2px;
+    margin-top: 2px;
+    color: darkorange;
+    border: darkorange 2px solid;
+}
+
+label{
+    width: 300px;
+}
+
+.submitButton{
+    height: 32px;
+    line-height: 32px;
+    /* border: none; */
+    background-color: darkorange;
+}
+
+select{
+    background-color: brown;
+    border: none;
+}
+
+input{
+    background-color: brown;
+    border: none;
+    width: 160px;
+    height: 32px;
+}
+
+#filterOptions{
+    background-color:rgb(107, 27, 16);
+    /* border-bottom-right-radius: 50px; */
+    font-size: 25px;
+    height: 196px;
+
+    box-shadow:
+    0 2px 0 goldenrod inset,
+    0 -2px 0 #7b3e1b inset,
+    0 0 0 4px #781d1d;
+}
+
+@font-face {
+    font-family: 'HSfont';
+    src: url('Belwe\ Bold.otf') format('opentype');
+  }
+
+.navbar{
+    font-family: 'HSfont', sans-serif;
+    background-color:saddlebrown;
+    font-size: 25px;
+    font-weight: bold;
+
+    background-image: url('navbarHatter.PNG');
+    background-size: contain;
+    background-repeat:repeat-x;
+    background-position: center;
+
+    color: peru !important;
+
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 1);
+}
+
+.navbar .nav-link {
+    color: peru !important;
+}
+  
+.navbar .nav-link:hover {
+    color:tan !important;
+}
+
+.nav-item-1 {
+  border: 3px solid #a14e28;
+  border-radius: 50px;
+  margin-right: 20px;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  box-shadow:
+  0 2px 0 goldenrod inset,
+  0 -2px 0 #7b3e1b inset,
+  0 0 0 4px #781d1d;  
+}
+
+.hs-logo{
+    height: 70px;
+}
+
+.nav-item-2{
+    margin-right: 20px;
+}
