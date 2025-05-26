@@ -1,9 +1,11 @@
 <?php
-
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $filterMana = $_POST['filterByMana'];
         echo "test: $filterMana";
     }
+
+        $todo = $_GET['todo'] ?? '';
+        $cardID = $_GET['cardID'] ?? '';
 ?>
 
 <!DOCTYPE html>
@@ -80,50 +82,38 @@
     </div>
     <div id="cardsDisplayMain">
         <!-- ide jönnek a kártyák -->
-        <div class="hsCard col-md-2">
-            <img class="commonBG" src="commonBG2.png" alt="bg">
-            <img class="cardImg" src="kartyaKepek/Ragnaros.webp" alt="">
-            <div class="hp">8</div>
-            <div class="att">8</div>
-            <div class="mana">8</div>
-            <div class="desc">Can't attack. At the end of your turn, deal 8 damage to a random enemy.</div>
-            <div class="title">Ragnaros</div>
-            <div class="type">Minion</div>
-        </div>
+    <?php
+        include_once 'cards.php';
+        $cardClass = new cards();
 
-        <div class="hsCard col-md-2">
-            <img class="commonBG" src="commonBG2.png" alt="bg">
-            <img class="cardImg" src="kartyaKepek/imp.jpg" alt="">
-            <div class="hp">1</div>
-            <div class="att">1</div>
-            <div class="mana">1</div>
-            <div class="desc"></div>
-            <div class="title">Imp</div>
-            <div class="type">Minion</div>
-        </div>
-
-        <div class="hsCard col-md-2">
-            <img class="commonBG" src="commonBG2.png" alt="bg">
-            <img class="cardImg" src="kartyaKepek/lava_shock.jpg" alt="">
-            <div class="hp"></div>
-            <div class="att"></div>
-            <div class="mana">2</div>
-            <div class="desc">Deal 2 damage. Unlock your Overloaded Mana Crystals.</div>
-            <div class="title">Lava shock</div>
-            <div class="type">Spell</div>
-        </div>
-
-        <div class="hsCard col-md-2">
-            <img class="commonBG" src="commonBG2.png" alt="bg">
-            <img class="cardImg" src="kartyaKepek/razorgores_claw.jpg" alt="">
-            <div class="hp">5</div>
-            <div class="att">1</div>
-            <div class="mana">1</div>
-            <div class="desc">Whenever a Corrupted Egg dies, gain +1 Attack.</div>
-            <div class="title">Razorgore's Claws</div>
-            <div class="type">Weapon</div>
-        </div>
+        if ($todo == "new") { include 'newCard.php';}
+        if ($todo == "save") { 
+            $cardClass->saveCard(); 
+            $todo = "";
+        }
+        if ($todo == "delete") { 
+            $cardClass->deleteCard(); 
+            $todo = "";
+            $cardID = "";
+        }
+        if($todo != 'new'){
+            $cardClass->showCards();
+        }
+    ?>
 
     </div>
+
+    <script>
+        function toggleElement(index) {
+            const elementList = document.querySelectorAll(".buttonsCard");
+            elementList.forEach(displaySet);
+
+            document.querySelector(`.buttonsCard${index}`).style.display = "inline";
+        }
+
+        function displaySet(element){
+            element.style.display = "none";
+        }
+    </script>
 </body>
 </html>

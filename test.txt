@@ -38,6 +38,6 @@
             <div class="att">1</div>
             <div class="mana">1</div>
             <div class="desc">Whenever a Corrupted Egg dies, gain +1 Attack.</div>
-            <div class="title">Razorgore's Claws</div>
+            <div class="title">Razorgores Claws</div>
             <div class="type">Weapon</div>
         </div>
