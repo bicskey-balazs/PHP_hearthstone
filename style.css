@@ -7,7 +7,13 @@
 #cardsDisplayMain{
     height: 1000px;
     background-image: url(hatter1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
     font-family: 'HSfont', sans-serif;
+
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
 }
 
 .seged{
@@ -20,6 +26,8 @@
 
 .hatter2{
     background-image: url(hatter2.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 200px;
     z-index: -1;
 }
@@ -113,4 +121,120 @@ input{
 
 .nav-item-2{
     margin-right: 20px;
+}
+
+.hsCard{
+    position: relative;
+    height: 360px;
+    width: 265px;
+    margin-top: 10px;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+.commonBG{
+    z-index: 2;
+    position: absolute;
+    height: 360px;
+    width: 265px;
+
+    border: 5px solid rgb(97, 48, 17);
+    object-fit: cover;
+}
+
+.cardImg{
+    position: absolute;
+    left: 67px;
+    height: 180px;
+    width: 141px;
+}
+
+.mana{
+    position: absolute;
+    left: 34px;
+    top: 4px;
+    color: white;
+    font-size: 45px;
+    z-index: 3;
+
+    text-shadow:
+    -2px -2px 0 black,
+    2px -2px 0 black,
+    -2px 2px 0 black,
+    2px 2px 0 black;
+}
+
+.hp{
+    position: absolute;
+    right: 20px;
+    top: 285px;
+    color: white;
+    font-size: 45px;
+    z-index: 3;
+
+    text-shadow:
+    -2px -2px 0 black,
+    2px -2px 0 black,
+    -2px 2px 0 black,
+    2px 2px 0 black;
+}
+
+.att{
+    position: absolute;
+    left: 34px;
+    top: 285px;
+    color: white;
+    font-size: 45px;
+    z-index: 3;
+
+    text-shadow:
+    -2px -2px 0 black,
+    2px -2px 0 black,
+    -2px 2px 0 black,
+    2px 2px 0 black;
+}
+
+.desc{
+    position: absolute;
+    width: 180px;
+    font-size: 12px;
+    left: 50px;
+
+    z-index: 3;
+
+    top: 230px;
+}
+
+.type{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 20px;
+    z-index: 3;
+
+    text-shadow:
+    -2px -2px 0 black,
+    2px -2px 0 black,
+    -2px 2px 0 black,
+    2px 2px 0 black;
+}
+
+.title{
+    position: absolute;
+    top: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 25px;
+    z-index: 3;
+
+    text-shadow:
+    -2px -2px 0 black,
+    2px -2px 0 black,
+    -2px 2px 0 black,
+    2px 2px 0 black;
+
+    white-space: nowrap;
 }

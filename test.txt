@@ -1,0 +1,43 @@
+        <div class="hsCard col-md-2">
+            <img class="commonBG" src="commonBG2.png" alt="bg">
+            <img class="cardImg" src="kartyaKepek/Ragnaros.webp" alt="">
+            <div class="hp">8</div>
+            <div class="att">8</div>
+            <div class="mana">8</div>
+            <div class="desc">Can't attack. At the end of your turn, deal 8 damage to a random enemy.</div>
+            <div class="title">Ragnaros</div>
+            <div class="type">Minion</div>
+        </div>
+
+        <div class="hsCard col-md-2">
+            <img class="commonBG" src="commonBG2.png" alt="bg">
+            <img class="cardImg" src="kartyaKepek/imp.jpg" alt="">
+            <div class="hp">1</div>
+            <div class="att">1</div>
+            <div class="mana">1</div>
+            <div class="desc"></div>
+            <div class="title">Imp</div>
+            <div class="type">Minion</div>
+        </div>
+
+        <div class="hsCard col-md-2">
+            <img class="commonBG" src="commonBG2.png" alt="bg">
+            <img class="cardImg" src="kartyaKepek/lava_shock.jpg" alt="">
+            <div class="hp"></div>
+            <div class="att"></div>
+            <div class="mana">2</div>
+            <div class="desc">Deal 2 damage. Unlock your Overloaded Mana Crystals.</div>
+            <div class="title">Lava shock</div>
+            <div class="type">Spell</div>
+        </div>
+
+        <div class="hsCard col-md-2">
+            <img class="commonBG" src="commonBG2.png" alt="bg">
+            <img class="cardImg" src="kartyaKepek/razorgores_claw.jpg" alt="">
+            <div class="hp">5</div>
+            <div class="att">1</div>
+            <div class="mana">1</div>
+            <div class="desc">Whenever a Corrupted Egg dies, gain +1 Attack.</div>
+            <div class="title">Razorgore's Claws</div>
+            <div class="type">Weapon</div>
+        </div>
