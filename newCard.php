@@ -1,19 +1,37 @@
-<div class="container">
+<div class="container" style="height: 1000px;">
     <h3>Új kártya hozzáadása</h3>
     <form action="index.php?todo=save" method="post">
         <div class="mb-3">
-            <label for="destination" class="form-label">Kártya neve</label>
-            <input type="text" class="form-control" id="destination" name="destination" >
+            <label for="title" class="form-label">Kártya neve:</label>
+            <input type="text" style="width: 250px" class="form-control" id="title" name="title" >
         </div>
         <div class="mb-3">
-            <label for="transport" class="form-label">Kártya leírása</label>
-            <input type="text" class="form-control" id="transport" name="transport" >
+            <label for="description" class="form-label">Kártya leírása:</label>
+            <input type="text" class="form-control" id="description" name="description" >
         </div>
-        <div class="mb-3">
-            <label for="transport" class="form-label">Életerö:</label>
-            <input type="number" class="form-control" id="transport" name="transport" >
+        <div class="d-flex mb-3">
+            <div class="">
+                <label for="hp" class="form-label">Életerö:</label>
+                <input type="number" style="width: 70px" max="99" class="form-control" id="hp" name="hp" >
+            </div>
+            <div class="">
+                <label for="attack" class="form-label">Sebzés:</label>
+                <input type="number" style="width: 70px" max="99" class="form-control" id="attack" name="attack" >
+            </div>
+            <div class="">
+                <label for="mana" class="form-label">Mana:</label>
+                <input type="number" style="width: 70px" max="99" class="form-control" id="mana" name="mana" >
+            </div>
+            <div>
+                <label for="type" class="form-label">Típus:</label>
+                <select name="type" id="type" class="form-control" style="width: 100px; height: 40px">
+                    <option value="Minion">Minion</option>
+                    <option value="Spell">Spell</option>
+                    <option value="Weapon">Weapon</option>
+                </select>
+            </div>
         </div>
 
-        <button type="submit" class="btn btn-primary">Mentés</button>
+        <button type="submit" class="btn btn-warning">Mentés</button>
     </form>
 </div>
