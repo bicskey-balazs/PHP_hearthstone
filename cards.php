@@ -40,6 +40,25 @@ class Cards {
         $att = htmlspecialchars($_POST['attack']);
         $mana = htmlspecialchars($_POST['mana']);
 
+        $invalid = false;
+        $errors = "";
+        if($title == ""){
+            $errors .= "title,";
+            $invalid = true;
+        }
+        if($type == ""){
+            $errors .= "type,";
+            $invalid = true;
+        }
+        if($mana == ""){
+            $errors .= "mana";
+            $invalid = true;
+        }
+        if($invalid){
+            header("Location: index.php?todo=new&errors=$errors");
+            return;
+        }
+
         $sql = "INSERT INTO `kartyak` (`ImageSrc`, `HP`, `Attack`, `Mana`, `Description`, `Title`, `Type`) VALUES
     ('alapKep.jpg', $hp, $att, $mana, '$desc', '$title', '$type')";
         $this->conn->query($sql);
